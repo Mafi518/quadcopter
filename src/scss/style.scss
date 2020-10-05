@@ -9,15 +9,32 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    position: relative;
     background-color: $background;
     color: $text;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
 }
+body::before {
+    content: '';
+    background-image: url(img/body-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 p, h1, h2, h3, h4, h5, h6, ul, hr {
     padding: 0;
     margin: 0;
+}
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
 }
 a {
     color: #fff;
@@ -63,10 +80,27 @@ header {
         margin-top: 45px;
     }
 }
-.head-info {
+.head-info,
+.quadcopter-info,
+.quadcopter-camera,
+.quadcopter-video,
+.quadcopter-control {
+    position: relative;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-around;
+}
+.head-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 940px;
+    height: 540px;
+    background-image: url(img/head-bg.png);
+    background-size: cover;
 }
 .head-info__title {
     font-size: 48px;
@@ -99,5 +133,152 @@ header {
 }
 .right {
 }
+
+//quadcopter-info
+
+.quadcopter-info {
+    ul {
+        list-style: none;
+        li + li{
+            margin-top: 25px;
+        }
+        li {
+            color: $subtitle;
+            counter-increment: counter;
+        }
+        li::before {
+            content: counter(counter);
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: $subtitle;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+            margin-right: 18px;
+        }
+    }
+}
+
+//quadcopter-camera
+
+.quadcopter-camera {
+    ul {
+        list-style: none;
+        li + li {
+            margin-top: 28px;
+        }
+        li {
+            color: $subtitle;
+        }
+    }
+}
+
+//gift
+
+#gift {
+    background-image: url(img/gift-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 243px;
+}
+.gift {
+    text-align: center;
+    .gift-title {
+        margin-top: 45px;
+        padding-bottom: 35px;
+    }
+    .cta-btn {
+        padding: 19px 36px;
+    }
+}
+
+// quadcopter-video
+
+.quadcopter-video__subtitle, .quadcopter-video__subtitle {
+    max-width: 651px;
+    color: $subtitle;
+    line-height: 45px;
+}
+.quadcopter-video__subtitle {
+    max-width: 627px;
+}
+
+// cta
+#cta {
+    background-image: url(img/cta-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 223px;
+}
+.cta {
+    width: 100%;
+    text-align: center;
+    .cta-title {
+        margin-top: 36px;
+    }
+    form {
+        display: flex;
+        justify-content: space-between;
+        input {
+            padding: 18px 20px;
+            border: 1px solid $accent;
+            background-color: #CBCBCB;
+            width: 350px;
+        }
+        .cta-btn {
+            padding: 19px 87px;
+        }
+    }
+}
+
+// advantages
+
+.advantages-list {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.advantages-item {
+    text-align: center;
+    p {
+        margin-top: 20px;
+        color: $subtitle;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @import 'media';
