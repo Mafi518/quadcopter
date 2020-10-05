@@ -3,8 +3,55 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        link(rel="stylesheet", href="style.css")
+        title Dji – квадракоптер
     body
         include header.pug
-        
+        section#head-info
+            .container
+                .head-info
+                    .left
+                        img(src="img/head-quadcopter.png", alt="Квадракоптер Dji Mavic 2 Pro")
+                    .right
+                        h1.head-info__title.title Квадрокоптер DJI Mavic 2 Pro
+                        p.head-info__subtitle Чудо инженерной мысли
+                        .head-info__price
+                            span.price 45 900 грн. 
+                            span.old-price 50 720 грн. 
+                        a.head-info__cta.cta-btn Купить со скидкой
+        section#quadcopter-info
+            .container
+                .quadcopter-info
+                    .left
+                    .right
+        section#quadcopter-camera
+            .container
+                .quadcopter-camera
+                    .left
+                    .right
+        section#gift
+            .container
+                .gift
+        section#quadcopter-video
+            .container
+                .quadcopter-video
+                    .left
+                    .right
+        section#quadcopter-control
+            .container
+                .quadcopter-control
+                    .left
+                    .right
+        section#cta
+            .container
+                .cta
+        section#advantages
+            .container
+                .advantages
+        section#feedback
+            .container
+                .feedback
+        section#contacts
+            .container
+                .contacts
         include footer.pug
