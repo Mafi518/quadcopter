@@ -55,7 +55,7 @@ html(lang="en")
         section#gift
             .container
                 .gift
-                    h2.gift-title.title Оформи заказ сейчас и получи бесплетное обучение полету в подарок
+                    h2.gift-title.title Оформи заказ сейчас и получи бесплатное обучение полету в подарок
                     a.cta-btn Заказать и получить подарок
         section#quadcopter-video
             .container
@@ -79,9 +79,9 @@ html(lang="en")
                 .cta
                     h2.cta-title.title Оставьте заявку и наш менеджет свяжется с вами
                     form(action="#")
-                        input(type="text" placeholder="Ваше имя")
-                        input(type="text" placeholder="Номер телефона")
-                        button(type="submit").cta-btn Оставить заявку
+                        input(type="text" placeholder="Ваше имя" required)
+                        input(type="text" placeholder="Номер телефона" required)
+                        button(type="submit").cta-btn.submit Оставить заявку
         section#advantages
             .container
                 .advantages-list
@@ -100,10 +100,51 @@ html(lang="en")
                     .advantages-item
                         img(src="img/support.svg", alt="Тех. поддержка 24/7")
                         p Тех. поддержка 24/7
-        section#feedback
-            .container
-                .feedback
+        section#feedback.feedback
+                h2.feedback-title.title Отзывы
+                .feedback-list
+                    .feedback-item
+                        img(src="img/feedback-image.png", alt="Отзыв от Виктории Алексеенко")
+                        h3.feedback-item__title.title Виктория Алексеенко
+                        p.feedback-item__subtitle Давно занимаюсь фото и видео контентом. Увидел у знакомого 1 ую версию Мавика и немного удалось по-управлять. Вдруг пришла идея приобрести себе сие чудо в версии 2.0. Первые впечатления ни с чем не сравнимы. Особенно, когда телефон выключается и вы не видите, что происходит, а дрон в этот момент на 120 метрах, вечером и на расстоянии метров 200. Благо в Мавике, есть всё предусмотренное для безопасноговозврата на точку взлёта
+                    .feedback-item
+                        img(src="img/feedback-image.png", alt="Отзыв от Виктории Алексеенко")
+                        h3.feedback-item__title.title Виктория Алексеенко
+                        p.feedback-item__subtitle Давно занимаюсь фото и видео контентом. Увидел у знакомого 1 ую версию Мавика и немного удалось по-управлять. Вдруг пришла идея приобрести себе сие чудо в версии 2.0. Первые впечатления ни с чем не сравнимы. Особенно, когда телефон выключается и вы не видите, что происходит, а дрон в этот момент на 120 метрах, вечером и на расстоянии метров 200. Благо в Мавике, есть всё предусмотренное для безопасноговозврата на точку взлёта
         section#contacts
             .container
                 .contacts
+                    .left
+                        h2.contacts-title.title Контакты
+                        hr
+                        .contacts-phone
+                            p Телефон:
+                            p +38-(097)-000-00-00 +38-(097)-000-00-00
+                        .contacts-email
+                            p E-mail:
+                            p Kvadrik@gmail.com
+                        .contacts-networks
+                            p Мы в социальных сетях:
+                            .contacts-networks__container
+                                a(href="#")
+                                    img(src="img/instagram.svg", alt="instagram")
+                                a(href="#")
+                                    img(src="img/facebook.svg", alt="facebook")
+                                a(href="#")
+                                    img(src="img/youtube.svg", alt="youtube")
+                    .right
+                        form(action="#").contacts-form
+                            h2.contacts-form__title.title Введите ваши данные
+                            p.contacts-form__subtitle Наш менеджер перезвонит вам в течении 30 минут
+                            input(type="text" placeholder="Ваше имя" required)
+                            input(type="text" placeholder="Номер телефона" required)
+                            button(type="submit").contacts-form__cta.cta-btn.submit Оставить заявку
+        .success-popup
+            img(src="img/succes-popup.svg", alt="Успех")
+            h2.success-popup__title.title Данные успешно отправлены
+        .error-popup
+            img(src="img/error-popup.svg", alt="Ошибка")
+            h2.error-popup__title.title Ошибка
+            p.error-popup__subtitle
+        .popup-bg
         include footer.pug
